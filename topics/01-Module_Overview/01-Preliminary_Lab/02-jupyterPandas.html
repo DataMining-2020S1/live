@@ -156,34 +156,40 @@
 <p>When all the required dependencies have been met, you can start the Jupyter web server from the command line and point your browser at the relevant url. Your browser then becomes the client that allows you to interact with the server.</p>
 <p>We will go into how notebooks can be used in a later lab.</p>
 <p>For now, we will just check that the software has been installed successfully.</p>
+<h2>Get the data file</h2>
+<p>If you have not done so already, you need to download <a href="files/auto-mpg.csv">auto-mpg.csv</a>.</p>
 <h2>Navigate to a suitable directory/folder</h2>
-<p>For this purpose, I advise you to change directory to where you downloaded <code>auto-mpg.csv</code></p>
+<p>For this purpose, my advice is to change directory to where you downloaded <code>auto-mpg.csv</code></p>
 <h2>Activate conda, so that the dependencies are in your python path</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
 </code></pre></div>
 </td></tr></table>
 <h2>Start the jupyter(lab) server</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>jupyter-lab
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>jupyter-lab
 ....
     Or copy and paste one of these URLs:
         http://localhost:8888/?token<span class="o">=</span>f9b36df2b7e03e15bd46c41552a883828d002a1c480f63f0
      or http://127.0.0.1:8888/?token<span class="o">=</span>f9b36df2b7e03e15bd46c41552a883828d002a1c480f63f0
 </code></pre></div>
 </td></tr></table>
-<p>Note that <code>jupyter-lab</code> will generally open a browser table for you. In your browser you should see the b<code>jupyter-lab</code> interface.</p>
+<p>Note that <code>jupyter-lab</code> will generally open a browser tab for you. In your browser you should see the <code>jupyter-lab</code> interface.</p>
 <h2>Create a new Python 3 notebook</h2>
 <p>The jupyter-lab page provides a handy "button" for this. Pressing that creates a new notebook with a default name of <code>Untitled.ipynb</code>. If you have an existing notebook, you can use the navigation panel to the Left to find the file and can open it by clicking on it.</p>
 <p>At this stage you might as well <code>File &gt; Save As</code> a more memorable name.</p>
 <h2>Create your first script</h2>
 <p>We are going to read the <code>auto-mpg.csv</code> file into a pandas <em>dataframe</em> and quickly view its contents.</p>
 <p>In the first cell, type</p>
-<p>import pandas as pd
-auto_mpg = pd.read_csv('auto_mpg.csv')
-auto_mpg.head()</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">auto_mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;auto-mpg.csv&#39;</span><span class="p">)</span>
+<span class="n">auto_mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <h2>Run your first script</h2>
 <p>Click the "play" button directly above the code cell and the notebook uses the Python 3 kernel to run your script.</p>
 <p>The output cell below your code cell will contain the first 5 rows of the <code>auto_mpg</code> data frame.</p>
