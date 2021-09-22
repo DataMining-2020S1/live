@@ -41,7 +41,7 @@
 					<!-- Moodle -->
 					<li>
 						<div class="navbar-header">
-							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=171403" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=182859" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
 						</div>						
 					</li>
 				</ul>
@@ -68,6 +68,10 @@
 										
 										<li class="active">
 											<a href="../../../topics/01-Module_Overview/index.html">Module Overview</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Motivating_Example/index.html">Motivating Example</a>
 										</li>
 										
 									</ul>
@@ -161,15 +165,15 @@
 <h2>Navigate to a suitable directory/folder</h2>
 <p>For this purpose, my advice is to change directory to where you downloaded <code>auto-mpg.csv</code></p>
 <h2>Activate conda, so that the dependencies are in your python path</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
 </code></pre></div>
 </td></tr></table>
 <h2>Start the jupyter(lab) server</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>jupyter-lab
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>jupyter-lab
 ....
     Or copy and paste one of these URLs:
         http://localhost:8888/?token<span class="o">=</span>f9b36df2b7e03e15bd46c41552a883828d002a1c480f63f0
@@ -183,9 +187,9 @@
 <h2>Create your first script</h2>
 <p>We are going to read the <code>auto-mpg.csv</code> file into a pandas <em>dataframe</em> and quickly view its contents.</p>
 <p>In the first cell, type</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">auto_mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;auto-mpg.csv&#39;</span><span class="p">)</span>
 <span class="n">auto_mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>

@@ -41,7 +41,7 @@
 					<!-- Moodle -->
 					<li>
 						<div class="navbar-header">
-							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=171403" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=182859" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
 						</div>						
 					</li>
 				</ul>
@@ -68,6 +68,10 @@
 										
 										<li class="active">
 											<a href="../../../topics/01-Module_Overview/index.html">Module Overview</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Motivating_Example/index.html">Motivating Example</a>
 										</li>
 										
 									</ul>
@@ -213,25 +217,25 @@ Next we cover installation of python using either a full <a href="https://www.an
 </ul>
 <h3>Verify Installation</h3>
 <p>Regardless of anaconda/miniconda option you picked, once installed you should be able to run python from the command line </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda activate
 python
 </code></pre></div>
 </td></tr></table>
 <p>to get output and python prompt</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Python <span class="m">3</span>.8.11 <span class="o">(</span>default, Aug  <span class="m">3</span> <span class="m">2021</span>, <span class="m">15</span>:09:35<span class="o">)</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Python <span class="m">3</span>.8.11 <span class="o">(</span>default, Aug  <span class="m">3</span> <span class="m">2021</span>, <span class="m">15</span>:09:35<span class="o">)</span> 
 <span class="o">[</span>GCC <span class="m">7</span>.5.0<span class="o">]</span> :: Anaconda, Inc. on linux
 Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
 &gt;&gt;&gt; 
 </code></pre></div>
 </td></tr></table>
 <p>Type <code>1+1</code> at the python prompt and press enter. You should get <code>2</code> or we are in trouble.....</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">quit</span><span class="p">()</span>
 </code></pre></div>
@@ -240,31 +244,31 @@ Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&
 <p><a name="ExtraPackages"></a></p>
 <h2>Extra Packages</h2>
 <p>Both <code>anaconda</code> and <code>miniconda</code> use a package manager called <code>conda</code>. To install a package you typically use command </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">PACKAGE_NAME</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">PACKAGE_NAME</span>
 </code></pre></div>
 </td></tr></table>
 <p>The <code>-y</code> option causes the install to automatically carry out required installs/updated instead of asking for user confirmation. </p>
 <p>Note: some packages are not installable using <code>conda</code>, in these cases or if your are using a standard (non-anaconda variant) distribution you can install using the <code>pip</code> installer using </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">PACKAGE_NAME</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">PACKAGE_NAME</span>
 </code></pre></div>
 </td></tr></table>
 <h3>Side Note: Environments</h3>
 <p>Both <code>conda</code> and <code>pip</code> support the idea of environments where within the one python distributions you might have a multiple of environments. This is to help avoid version conflicts between modules.  <code>aanconda</code> and <code>miniconda</code> both start with one default environment called <code>root</code>.  If you wish to use environments, you need to apply two steps: 1) create an environment using </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">data_mining</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">data_mining</span>
 </code></pre></div>
 </td></tr></table>
 <p>and 2) activate it using </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">activate</span> <span class="n">data_mining</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">activate</span> <span class="n">data_mining</span>
 </code></pre></div>
 </td></tr></table>
 <p>Since all of the packages that we plan to use work are (currently, Jan 2021) compatible we won't need to use multiple environments but they are a good idea and if you are interested there is a nice introduction at <a href="https://astrobiomike.github.io/unix/conda-intro">
 Happy Belly Bioinformatic</a>.</p>
 <h3>Packages that need installing if using <code>miniconda</code> (they are already included in anaconda)</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">numpy</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">numpy</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">scipy</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">matplotlib</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">seaborn</span>
@@ -273,14 +277,14 @@ Happy Belly Bioinformatic</a>.</p>
 </td></tr></table>
 <p>(last update Feb 11)</p>
 <h3>Packages that need installing if using <code>miniconda</code> or <code>anaconda</code></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">dtale</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">dtale</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">voila</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">featuretools</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="o">-</span><span class="n">y</span> <span class="n">graphviz</span>
