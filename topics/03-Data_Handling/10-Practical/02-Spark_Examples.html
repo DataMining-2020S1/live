@@ -173,6 +173,10 @@ and display the results of that change.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./bin/spark-submit examples/src/main/python/ml/sql_transformer.py
 </code></pre></div>
 </td></tr></table>
+<p>On Windows, the equivalent command is</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>spark-submit ..<span class="se">\e</span>xamples<span class="se">\s</span>rc<span class="se">\m</span>ain<span class="se">\p</span>ython<span class="se">\m</span>l<span class="se">\s</span>ql_transformer.py
+</code></pre></div>
+</td></tr></table>
 <p>There is also a <a href="files/sparkDfExample.ipynb">Jupyter notebook</a> (right click and
 "Save As" to use) version that takes those basic operations, and shows how data
 from a Spark context (which "lives" in the HDFS data store that Spark uses, and
@@ -180,11 +184,19 @@ hence has been distributed across multiple nodes (in this case, the nodes are
 virtual)) can be read into a pandas (in-memory) dataframe, subjected to more
 changes, and written back as a Spark dataframe. The notebook has been annotated
 to explain what is going on.</p>
+<p>To run the notebook, you should have activated the <code>spark</code> conda environment
+(where <code>pyspark</code> and <code>jupyter</code> co-exist), assigned the <code>SPARK_HOME</code>environment
+variable and then you can start the jupyter server in the usual way</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>jupyter lab
+</code></pre></div>
+</td></tr></table>
 <h2>Transform examples</h2>
 <p>There are two examples of transformation pipelines.</p>
 <p>The first is the classic word count program for Spark, translated to python and
-stored in a <a href="files/wordCount.ipynb">notebook</a>.</p>
-<p>The second computes $\pi$ using a geometric approach. This does not use map and
+stored in a <a href="files/wordCount.ipynb">notebook</a>. You will need a
+<a href="files/data/exampleText.txt">file containing example text</a>, placed in a directory
+called <code>data/</code> below where you downloaded the notebook.</p>
+<p>The second computes pi using a geometric approach. This does not use map and
 reduce as such, but it shows how transformers can be applied in sequence. This
 example can also be downloaded as a <a href="files/calcPi.ipynb">notebook</a>.</p>
 		

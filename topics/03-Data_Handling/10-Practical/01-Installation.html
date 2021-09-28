@@ -232,9 +232,9 @@ spark provides the remaining machine learning functionalities through its
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda create --name spark <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 pyspark
+conda activate spark
 conda install -c conda-forge -y findspark
 conda install -c conda-forge -y jupyter
-conda activate spark
 </code></pre></div>
 </td></tr></table>
 <h1>Check that Spark server can be started OK</h1>
@@ -246,6 +246,13 @@ core):</p>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">cd</span> spark-3.1.2-bin-hadoop3.2
 <span class="nv">nThread</span><span class="o">=</span><span class="m">2</span>
 ./bin/spark-shell --master local<span class="o">[</span><span class="nv">$nThread</span><span class="o">]</span>
+</code></pre></div>
+</td></tr></table>
+<p><code>zsh</code> users need to wrap the last argument in double quotes: <code>"local[2]"</code>.</p>
+<p>On Windows, the equivalent commands would be</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">cd</span> spark-3.1.2-bin-hadoop3.2/bin
+spark-shell --master local<span class="o">[</span><span class="m">2</span><span class="o">]</span>
 </code></pre></div>
 </td></tr></table>
 <p>See screen shot of <code>spark-shell</code> below.</p>
@@ -271,6 +278,10 @@ of a disk of unit radius (which is <code>pi</code> by definition).</p>
   <span class="m">10</span>
 </code></pre></div>
 </td></tr></table>
+<p>On Windows, the equivalent command would be</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>spark-submit --class org.apache.spark.examples.SparkPi --master local<span class="o">[</span><span class="m">2</span><span class="o">]</span> ..<span class="se">\e</span>xamples<span class="se">\j</span>ars<span class="se">\s</span>park-examples_2.12-3.1.2.jar <span class="m">10</span>
+</code></pre></div>
+</td></tr></table>
 <h1>Check that Spark can run <em>python</em> jobs</h1>
 <p>It might be easier to use the pyspark included in the Spark distribution to
 interact with Spark directly, using python rather than scala. The equivalent
@@ -278,11 +289,19 @@ invocation of the Python-based SparkPi example is</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./bin/spark-submit examples/src/main/python/pi.py <span class="m">10</span>
 </code></pre></div>
 </td></tr></table>
+<p>On Windows, the equivalent command would be</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>spark-submit ..<span class="se">\e</span>xamples<span class="se">\s</span>rc<span class="se">\m</span>ain<span class="se">\p</span>ython<span class="se">\p</span>i.py <span class="m">10</span>
+</code></pre></div>
+</td></tr></table>
 <p>where <code>spark-submit</code> uses <code>pyspark</code> behind the scenes to handle python-based
 jobs.</p>
 <p>Indeed, <code>pyspark</code> can be used more directly to provide a python shell that can
 be used to start and stop Spark and to control its operations:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./bin/pyspark --master local<span class="o">[</span><span class="nv">$nThread</span><span class="o">]</span>
+</code></pre></div>
+</td></tr></table>
+<p>with the usual caveat for <code>zsh</code> users.  On Windows, the equivalent command would be</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pyspark --master local<span class="o">[</span><span class="m">2</span><span class="o">]</span>
 </code></pre></div>
 </td></tr></table>
 <p>Or you can use the pyspark installed using conda: (assuming you have already
