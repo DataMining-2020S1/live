@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BSc - Data Mining 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=182859" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Module_Overview/index.html">Module Overview</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Motivating_Example/index.html">Motivating Example</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html">Data Handling</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Exploratory_Data_Analysis/index.html">Exploratory Data Analysis</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/05-Exploratory_Data_Analysis2/index.html">Exploratory Data Analysis2</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/06-Data_Modelling/index.html">Data Modelling</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/06-Data_Modelling/index.html#01-Data_Modelling_-_Introduction">Data Modelling - Introduction</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/06-Data_Modelling/index.html#10-Lab_Train_Test_split">Lab Train Test split</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/06-Data_Modelling/index.html#21-Lab_04_-_Need_for_Train-Test_Split.tar.xz">Lab 04 - Need for Train-Test Split.tar.xz</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Overview</h1>
+<p>This week, you are asked to consider the iris data that we used to explore the
+use of the k-nearest neighbours (KNN) classifier.</p>
+<p>During our week 6 lecture we noted that one of the defining characteristics of
+the machine learning approach (versus the statistical approach) is that the
+full data set needs to be split, at least 2 ways (train-test) or preferably 3
+ways (train-validate-test).</p>
+<p>Usually this is not difficult, because the size of data sets considered in
+machine learning is generally larger than the size of the sets considered by
+the statistic-led approach.</p>
+<p>Remember: our goal is to build a <strong>prediction</strong> model, so our metrics to
+evaluate our model must be based on how well the model predicts.</p>
+<p>In this lab, I highlight the main steps and ask you to fill in the gaps when
+implementing this lab in a Jupyter notebook, noting what you find.</p>
+<h2>Setup</h2>
+<p>We first import the usual python packages, so they are available for use later.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div>
+</td></tr></table>
+<p>The well-known iris data is already in scikit-learn, so we can load it easily</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">iris</span>
+</code></pre></div>
+</td></tr></table>
+<p>You will notice that the <code>iris</code> data is actually a python <code>dict</code>, notably
+containing <code>data</code>, <code>target</code> <code>target_names</code> and <code>feature_names</code> fields.</p>
+<p>It is not yet in the standard format for supervised learning for scikit-learn,
+which expects a dataframe of features (we can call this <code>X</code>) and a vector
+<code>y</code>(of labels in this instance) that we wish to fit.</p>
+<p><code>X</code> and <code>y</code> should each contain numeric data (they do this already) but the
+columns of <code>X</code> should have more meaningful names. Indeed, the names are already
+listed in <code>feature_names</code> but you need to assign them yourself.</p>
+<p><strong>FOR YOU</strong>: You need to create the pandas dataframe <code>X</code> from the numpy array,
+using <code>pd.DataFrame()</code>, taking care to replace the dummy column names with
+those in <code>feature_names</code>.</p>
+<h2>Scaling the features</h2>
+<p>The first step is to scale the numeric features in <code>X</code> using your choice of
+scaler from <code>sklearn.processing</code>. There was some example code in Friday's
+lecture or you can refer to the relevant entry such as that for
+<code>StandardScaler</code> in the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">online
+manual</a>.</p>
+<p>In this dataset, the choice of scaler has little effect, but for other
+datasets, one choice might be better than the others. Indeed, searching for the
+best choice of scaler could even be considered an example of hyperparameter
+tuning.</p>
+<p><strong>FOR YOU</strong>: To derive the scaling from the data and apply the resulting
+scaling transformation to the same data, you can use the <code>.fit_transform()'
+method on the scaler, applying it to</code>X`.</p>
+<h2>Splitting into training and test sets</h2>
+<p>The scikit-learn splitting function needs to be imported first</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">Xtrain</span><span class="p">,</span> <span class="n">Xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>For this data, I suggest a train-test split of 80:20 which works out as 120
+training observations and 30 test observations.</p>
+<p>Note that, with classification data having very unbalanced labels, the split
+should be <code>stratified</code> according to the distribution of labels. For example, if
+the overall data has 50 times as many non-fraudulent transactions as fraudulent
+transactions, the same ratio should apply to the training and test sets.
+Generally speaking, even if the ratio of label values is 1:1:1 as it is here,
+you might as well request a stratified split anyway. You can do this by setting
+<code>stratify = y</code> in the call to <code>train_test_split</code>.</p>
+<h2>Choosing features</h2>
+<p>For the iris data, we can choose any non-empty subset of the 4 available
+features (choose from 4 individual features, 6 double features, 4 triple
+features and all 4 features, making 15 possible feature subsets in all).</p>
+<p>Each of these feature subsets can be used when providing training data for the
+knn classifier that we used in week 2.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+  <span class="n">model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+  <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtrain_1234</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>FOR YOU</strong>: For each model you fit, you need to compute the predicted 
+labels for the test set using <code>model.predict(ytest)</code>.</p>
+<h2>Choosing the best hyperparameter values</h2>
+<p>Note that we have different choices of <code>k</code> and of the feature sets we used
+for fitting the data. We can score each choice by computing the <em>accuracy</em>
+of the model when it comes to predicting labels for the test set.</p>
+<p>Recall that we actually know the true labels of the test set (they were provided
+in the data) but we chose to ignore them when applying the model to predict
+those labels. In practice, there will be differences between the true and
+predicted labels. The (normalised) accuracy is 1 when each of the predicted
+labels matches the corresponding true label. We are looking to maximise this
+accuracy score.</p>
+<p><strong>FOR YOU</strong>: For each model you fit, you need to calculate its accuracy score
+using something like</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">ytest</span><span class="p">,</span> <span class="n">ytest_pred</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>FOR YOU</strong>: Looking across the models you tried, which had the best accuracy?
+Do you notice any patterns?</p>
+<h2>Cross validation</h2>
+<p>The iris data is a little on the small side for K-fold cross validation, unless
+the number of folds is kept small (like 3).</p>
+<p>It has the benefit that it gives us the ability to estimate the uncertainty in the
+accuracy scores. That way, if many scores are similar, and each has high uncertainty,
+ranking them is not very meaningful.</p>
+<p>In future labs with larger datasets, it would make sense to compare after cross
+validation, rather than simply using a simple train-test split for each configuration
+of hyperparameters.</p>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
