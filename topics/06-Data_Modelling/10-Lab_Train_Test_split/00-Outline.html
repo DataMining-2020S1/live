@@ -207,7 +207,7 @@ which expects a dataframe of features (we can call this <code>X</code>) and a ve
 columns of <code>X</code> should have more meaningful names. Indeed, the names are already
 listed in <code>feature_names</code> but you need to assign them yourself.</p>
 <p><strong>FOR YOU</strong>: You need to create the pandas dataframe <code>X</code> from the numpy array,
-using <code>pd.DataFrame()</code>, taking care to replace the dummy column names with
+using <code>pd.DataFrame()</code>, taking care to replace the default 0,1,2,3 column names with
 those in <code>feature_names</code>.</p>
 <h2>Scaling the features</h2>
 <p>The first step is to scale the numeric features in <code>X</code> using your choice of
@@ -220,8 +220,8 @@ datasets, one choice might be better than the others. Indeed, searching for the
 best choice of scaler could even be considered an example of hyperparameter
 tuning.</p>
 <p><strong>FOR YOU</strong>: To derive the scaling from the data and apply the resulting
-scaling transformation to the same data, you can use the <code>.fit_transform()'
-method on the scaler, applying it to</code>X`.</p>
+scaling transformation to the same data, you can use the <code>.fit_transform()</code>
+method on the scaler, applying it to <code>X</code>.</p>
 <h2>Splitting into training and test sets</h2>
 <p>The scikit-learn splitting function needs to be imported first</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
@@ -256,7 +256,7 @@ knn classifier that we used in week 2.</p>
 </code></pre></div>
 </td></tr></table>
 <p><strong>FOR YOU</strong>: For each model you fit, you need to compute the predicted 
-labels for the test set using <code>model.predict(ytest)</code>.</p>
+labels for the test set using <code>model.predict(Xtest)</code>.</p>
 <h2>Choosing the best hyperparameter values</h2>
 <p>Note that we have different choices of <code>k</code> and of the feature sets we used
 for fitting the data. We can score each choice by computing the <em>accuracy</em>
